@@ -1,0 +1,397 @@
+.menu{
+    width: 40px;
+    height: 44px;
+    position:fixed;
+    right: 5%;
+    top:10%;
+    z-index: 300;
+
+    @media (max-width:800px){
+        width: 35px;
+        height: 35px;
+    }
+
+    @media (max-width:500px){
+        width: 25px;
+        height: 25px;
+        top:12%
+    }
+   
+    .menu-label{
+        @extend %fullscreen;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+
+        .menu-line{
+            width: 100%;
+            height: 3px;
+            background-color: $color-logo;
+            transition: all .5s;
+            transform-origin: right;
+
+            @media (max-width:800px){
+                height: 3px;
+            }
+
+            @media (max-width:500px){
+                height: 2px;
+            }
+        }
+    }
+}
+
+.cheackbox:checked ~ .navbar-navigation .navbar-navigation-left{
+    left: 0;
+}
+
+.cheackbox:checked ~ .navbar-navigation .navbar-navigation-right{
+    right: 0;
+}
+
+.cheackbox:checked ~ .menu .menu-label {
+    transform: rotateZ(90deg);
+}
+
+.cheackbox:checked ~ .menu  .menu-line-1{
+    transform: rotateZ(-45deg);
+}
+
+.cheackbox:checked ~ .menu  .menu-line-2{
+    opacity: 0;
+}
+
+.cheackbox:checked ~ .menu  .menu-line-3{
+    transform: rotateZ(45deg);
+}
+
+#check{
+    display: none;
+}
+
+
+.logo{
+    border: 3px $color-logo solid;
+    border-radius: 50%;
+    font-size: 70px;
+    width: 110px;
+    height: 110px;
+    
+    text-decoration: none;
+    margin-right: 20px;
+    color: $color-logo;
+    @include display;
+
+    @media (max-width:1000px){
+        font-size: 50px;
+        width: 90px;
+        height: 90px;
+    }
+
+    @media (max-width:500px){
+        font-size: 30px;
+        width: 55px;
+        height: 55px;
+        border-width: 2px;
+    }
+}
+
+
+.main-h1{
+    font-family:$font-3;
+    color:$GRAY;
+    font-size: 40px;
+    @include textstyle;
+
+    @media (max-width:1000px){
+        font-size: 40px;
+    }
+
+    @media (max-width:500px){
+        font-size: 20px;
+        text-align: center;
+    }
+}
+
+.p{
+    @include textstyle; 
+    text-align: center;
+    font-family:$font-2 ;
+    font-size: 15px;
+    color: $GRAY;
+
+    @media (max-width:500px){
+        font-size: 12px;
+        text-align: center;
+    }
+}
+
+.header{
+
+.h1-section{
+    font-size: 100px;
+    font-family: $font-1;
+    font-weight: 300;
+    color: $color-logo;
+    margin-bottom: 40px;
+    margin-top: 60px;
+
+    @media (max-width:1600px){
+            font-size:100px;
+    }
+
+    @media (max-width:1000px){
+        font-size: 60px;
+    }
+
+   @media (max-width:500px){
+          font-size: 50px;
+
+    }
+
+}
+
+.h3-section{
+    font-family: $font-2;
+    color: $GRAY;
+    font-size: 55px;
+    font-weight: 300;
+    margin-bottom: 40px;  
+
+    @media (max-width:1600px){
+        font-size: 45px;
+
+    }
+    @media (max-width:1000px){
+        font-size: 40px;
+    }
+    @media (max-width:500px){
+        font-size: 30px;
+
+  }
+}
+
+
+}
+
+.about{
+    .h1-section{
+        font-size: 90px;
+        font-family: $font-1;
+        font-weight: 300;
+        color: $color-logo;
+        margin-bottom: 40px;
+        margin-top: 60px;
+
+        @media (max-width:1600px){
+            font-size: 80px;
+        }
+
+        @media (max-width:1000px){
+             font-size: 60px;
+        }
+
+        @media (max-width:500px){
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+      
+    }
+    
+    .h3-section{
+        font-family: $font-2;
+        color: $GRAY;
+        font-size: 50px;
+        font-weight: 300;
+        margin-bottom: 40px;  
+
+        
+        @media (max-width:1600px){
+            font-size: 50px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        @media (max-width:1200px){
+            font-size: 40px;
+            margin-bottom: 30px;
+        }
+
+        @media (max-width:1000px){
+            font-size: 30px;
+       }
+       @media (max-width:500px){
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+     
+    }
+
+}
+
+.btn-home{
+    width: 170px;
+    height: 45px;
+    font-family: $font-2;
+    border: $color-logo 1.5px solid;
+    background-color: transparent;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: $color-logo;
+    border-radius: 2px;
+    outline: none;
+
+    &:hover{
+        background-color: $color-logo;
+        color: $color;
+    }
+
+    @media (max-width:800px){
+        width: 150px;
+        height: 35px;
+        font-size: 12px;
+    }
+
+    @media (max-width:500px){
+        width: 130px;
+        height: 30px;
+        font-size: 10px;
+    }
+}
+
+
+.card{
+    width: 33.3333%;
+    height: 30vw;
+    position: relative;
+    overflow: hidden;
+
+    &:hover .card-overlay{
+        left: 0;
+    }
+
+    &-overlay{
+        position: absolute;
+        top: 0;
+        left: -100%;
+        @extend %fullscreen;
+        background-color: rgba($color-logo,0.6);
+        color: $white;
+        z-index: 10;
+        @include  display;
+        flex-direction: column;
+        transition: left 0.7s;
+
+        .h1-overlay{
+            font-family: $font-3;
+            font-size: 50px;
+            @include textstyle(capitalize);
+
+            @media (max-width:900px){
+                font-size: 35px;
+            }
+
+            @media (max-width:650px){
+                font-size: 25px;
+            }
+
+            @media (max-width:500px){
+                font-size: 18px;
+                
+            }
+
+            @media (max-width:400px){
+                font-size: 16px;
+            }
+        }
+
+        .p-overlay{
+            font-family: $font-2;
+            font-size: 30px;
+            margin-bottom: 30px;
+
+            @media (max-width:900px){
+                font-size:20px;
+            }
+
+            
+            @media (max-width:650px){
+                font-size: 15px;
+            }
+
+            @media (max-width:400px){
+                font-size: 14px;
+            }
+ 
+        }
+
+        .btn-overlay{
+            width: 150px;
+            height: 40px;
+            color: $color-logo;
+            background-color: $white;
+            font-family: $font-2;
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 1px solid $color-logo;
+            border-radius: 30px;
+            outline: none;
+            cursor: pointer;
+
+            @media (max-width:900px){
+                font-size: 12px;
+                width: 130px;
+                height: 30px;
+            }
+
+            @media (max-width:650px){
+                font-size: 10px;
+                width: 100px;
+                height: 30px;
+            }
+
+            @media (max-width:500px){
+                font-size: 8px;
+                width: 90px;
+                height: 25px;
+            }
+        }
+    }
+
+    &-img{
+         @extend %fullscreen;
+        object-fit: cover;
+        opacity: 0.5;
+    }
+}
+
+.scroll-to-top{
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    padding: 10px 10px;
+    background-color: $color-logo;
+    border-radius: 50%;
+    border: none;
+    z-index: 100;
+}
+
+.hr-news{
+    max-width: 800px;
+    margin: 0 auto;
+    
+
+    @media (max-width:900px){
+        max-width: 450px;
+    }
+
+    @media (max-width:500px){
+        max-width: 360px;
+    }
+}
+
+  
